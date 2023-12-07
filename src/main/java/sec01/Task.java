@@ -11,12 +11,11 @@ public class Task {
     public static void ioIntensive(int i) {
         try {
             log.info("início: I/O operation task {}", i);
-            Thread.sleep(Duration.ofSeconds(10));
+            Thread.sleep(Duration.ofSeconds(60));
             log.info("final: I/O operation task {}", i);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
 
 

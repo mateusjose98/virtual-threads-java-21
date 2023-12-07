@@ -47,4 +47,12 @@ Bem, mas qual é o problema disso?
 é aí que entra a ideia de Virtual Threads.
 
 
-Virtual Threads são daemons por default. Podemos esperar usando o latch.await() para aguardar várias threads.
+Virtual Threads são daemons por default. Podemos esperar usando o latch.await() para aguardar várias threads. Vemos fazer um exemplo com virtual threads, considere a task abaixo que demora 60 segundos para executar:
+![img_3.png](img_3.png)
+Podemos executar essa tarefa repassando-a para uma Thread, nesse caso para uma virtual thread:
+![img_4.png](img_4.png)
+configurei o MAX_VIRTUAL para 1_000_000 (1 milhão de tasks rodando :zany_face:)
+
+Veja o gráfico: 
+
+![img_5.png](img_5.png)
